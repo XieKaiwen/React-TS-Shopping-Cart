@@ -36,6 +36,8 @@ export function ShoppingCartProvider({
     (quantity, item) => item.quantity + quantity,
     0
   );
+  // console.log("Context rerendered")
+  // const cartQuantity = 0;
 
   function openCart(){
     setIsOpen(true)
@@ -56,8 +58,9 @@ export function ShoppingCartProvider({
       } else {
         return currItems.map((item) => {
           if (item.id === id) {
-            return { ...item, quantity: item.quantity + 1 };
+            return { ...item, quantity: item.quantity + 1 }
           }
+          return item
         });
       }
     });
@@ -72,6 +75,7 @@ export function ShoppingCartProvider({
           if (item.id === id) {
             return { ...item, quantity: item.quantity - 1 };
           }
+          return item
         });
       }
     });
