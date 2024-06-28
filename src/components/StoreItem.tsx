@@ -10,7 +10,7 @@ type StoreItemProps = {
 };
 
 export default function StoreItem({ id, name, price, imgUrl }: Readonly<StoreItemProps>) {
-  const {getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart, openCart, closeCart} = useShoppingCart()
+  const {getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart} = useShoppingCart()
   const quantity = getItemQuantity(id)
   return (
     <Card key={id} className="h-100">

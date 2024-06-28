@@ -22,7 +22,7 @@ const {openCart, cartQuantity} = useShoppingCart()
         </Nav>
         {cartQuantity > 0 &&
           <Button
-            onClick={()=>openCart}
+            onClick={()=>openCart()}
             style={{ width: "3rem", height: "3rem", position: "relative" }}
             variant="outline-primary"
             className="rounded-circle"
